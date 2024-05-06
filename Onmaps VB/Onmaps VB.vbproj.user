@@ -1,10 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="frmAgregarCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmAgregarSede.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmExamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmNuevoParticipante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmNuevoPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmOnmapsMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmSplash.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

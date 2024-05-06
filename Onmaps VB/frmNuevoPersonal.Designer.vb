@@ -29,21 +29,21 @@ Partial Class frmNuevoPersonal
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.tableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.txtIdPersonal = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.txtIdParticipante = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblIdPersonal = New System.Windows.Forms.Label()
-        Me.lblMaterno = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lblDireccion = New System.Windows.Forms.Label()
         Me.lblFechaNac = New System.Windows.Forms.Label()
         Me.txtPaterno = New System.Windows.Forms.TextBox()
         Me.txtMaterno = New System.Windows.Forms.TextBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpFechaNacimiento = New System.Windows.Forms.DateTimePicker()
-        Me.lblPaterno = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvDatos
@@ -56,7 +56,7 @@ Partial Class frmNuevoPersonal
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.RowHeadersWidth = 51
         Me.dgvDatos.RowTemplate.Height = 29
-        Me.dgvDatos.Size = New System.Drawing.Size(655, 324)
+        Me.dgvDatos.Size = New System.Drawing.Size(642, 324)
         Me.dgvDatos.TabIndex = 13
         '
         'btnCancelar
@@ -109,82 +109,82 @@ Partial Class frmNuevoPersonal
         Me.btnNuevo.TabIndex = 8
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'tableLayoutPanel1
+        'TableLayoutPanel2
         '
-        Me.tableLayoutPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TableLayoutPanel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tableLayoutPanel1.AutoSize = True
-        Me.tableLayoutPanel1.ColumnCount = 6
-        Me.tableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.tableLayoutPanel1.Controls.Add(Me.txtIdPersonal, 0, 1)
-        Me.tableLayoutPanel1.Controls.Add(Me.txtNombre, 1, 1)
-        Me.tableLayoutPanel1.Controls.Add(Me.lblIdPersonal, 0, 0)
-        Me.tableLayoutPanel1.Controls.Add(Me.lblMaterno, 3, 0)
-        Me.tableLayoutPanel1.Controls.Add(Me.lblDireccion, 4, 0)
-        Me.tableLayoutPanel1.Controls.Add(Me.lblFechaNac, 5, 0)
-        Me.tableLayoutPanel1.Controls.Add(Me.txtPaterno, 2, 1)
-        Me.tableLayoutPanel1.Controls.Add(Me.txtMaterno, 3, 1)
-        Me.tableLayoutPanel1.Controls.Add(Me.txtDireccion, 4, 1)
-        Me.tableLayoutPanel1.Controls.Add(Me.lblNombre, 1, 0)
-        Me.tableLayoutPanel1.Controls.Add(Me.dtpFechaNacimiento, 5, 1)
-        Me.tableLayoutPanel1.Controls.Add(Me.lblPaterno, 2, 0)
-        Me.tableLayoutPanel1.Location = New System.Drawing.Point(12, 58)
-        Me.tableLayoutPanel1.Name = "tableLayoutPanel1"
-        Me.tableLayoutPanel1.RowCount = 2
-        Me.tableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableLayoutPanel1.Size = New System.Drawing.Size(652, 80)
-        Me.tableLayoutPanel1.TabIndex = 7
+        Me.TableLayoutPanel2.AutoSize = True
+        Me.TableLayoutPanel2.ColumnCount = 6
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel2.Controls.Add(Me.txtIdParticipante, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblIdPersonal, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblDireccion, 4, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblFechaNac, 5, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtPaterno, 2, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMaterno, 3, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtDireccion, 4, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.dtpFechaNacimiento, 5, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 2, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(12, 58)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(642, 80)
+        Me.TableLayoutPanel2.TabIndex = 15
         '
-        'txtIdPersonal
+        'txtIdParticipante
         '
-        Me.txtIdPersonal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtIdPersonal.Enabled = False
-        Me.txtIdPersonal.Location = New System.Drawing.Point(3, 43)
-        Me.txtIdPersonal.Name = "txtIdPersonal"
-        Me.txtIdPersonal.ReadOnly = True
-        Me.txtIdPersonal.Size = New System.Drawing.Size(102, 27)
-        Me.txtIdPersonal.TabIndex = 0
+        Me.txtIdParticipante.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtIdParticipante.Enabled = False
+        Me.txtIdParticipante.Location = New System.Drawing.Point(3, 43)
+        Me.txtIdParticipante.Name = "txtIdParticipante"
+        Me.txtIdParticipante.ReadOnly = True
+        Me.txtIdParticipante.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdParticipante.TabIndex = 0
         '
         'txtNombre
         '
         Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombre.Enabled = False
-        Me.txtNombre.Location = New System.Drawing.Point(111, 43)
+        Me.txtNombre.Location = New System.Drawing.Point(109, 43)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(102, 27)
+        Me.txtNombre.Size = New System.Drawing.Size(100, 27)
         Me.txtNombre.TabIndex = 1
         '
         'lblIdPersonal
         '
         Me.lblIdPersonal.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblIdPersonal.AutoSize = True
-        Me.lblIdPersonal.Location = New System.Drawing.Point(15, 10)
+        Me.lblIdPersonal.Location = New System.Drawing.Point(14, 10)
         Me.lblIdPersonal.Name = "lblIdPersonal"
         Me.lblIdPersonal.Size = New System.Drawing.Size(77, 20)
         Me.lblIdPersonal.TabIndex = 2
         Me.lblIdPersonal.Text = "IdPersonal"
         '
-        'lblMaterno
+        'Label1
         '
-        Me.lblMaterno.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblMaterno.AutoSize = True
-        Me.lblMaterno.Location = New System.Drawing.Point(345, 10)
-        Me.lblMaterno.Name = "lblMaterno"
-        Me.lblMaterno.Size = New System.Drawing.Size(65, 20)
-        Me.lblMaterno.TabIndex = 5
-        Me.lblMaterno.Text = "Materno"
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(338, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 20)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Materno"
         '
         'lblDireccion
         '
         Me.lblDireccion.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblDireccion.AutoSize = True
-        Me.lblDireccion.Location = New System.Drawing.Point(450, 10)
+        Me.lblDireccion.Location = New System.Drawing.Point(441, 10)
         Me.lblDireccion.Name = "lblDireccion"
         Me.lblDireccion.Size = New System.Drawing.Size(72, 20)
         Me.lblDireccion.TabIndex = 6
@@ -194,7 +194,7 @@ Partial Class frmNuevoPersonal
         '
         Me.lblFechaNac.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblFechaNac.AutoSize = True
-        Me.lblFechaNac.Location = New System.Drawing.Point(554, 0)
+        Me.lblFechaNac.Location = New System.Drawing.Point(544, 0)
         Me.lblFechaNac.Name = "lblFechaNac"
         Me.lblFechaNac.Size = New System.Drawing.Size(83, 40)
         Me.lblFechaNac.TabIndex = 7
@@ -204,78 +204,78 @@ Partial Class frmNuevoPersonal
         '
         Me.txtPaterno.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtPaterno.Enabled = False
-        Me.txtPaterno.Location = New System.Drawing.Point(219, 43)
+        Me.txtPaterno.Location = New System.Drawing.Point(215, 43)
         Me.txtPaterno.Name = "txtPaterno"
-        Me.txtPaterno.Size = New System.Drawing.Size(102, 27)
+        Me.txtPaterno.Size = New System.Drawing.Size(100, 27)
         Me.txtPaterno.TabIndex = 8
         '
         'txtMaterno
         '
         Me.txtMaterno.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtMaterno.Enabled = False
-        Me.txtMaterno.Location = New System.Drawing.Point(327, 43)
+        Me.txtMaterno.Location = New System.Drawing.Point(321, 43)
         Me.txtMaterno.Name = "txtMaterno"
-        Me.txtMaterno.Size = New System.Drawing.Size(102, 27)
+        Me.txtMaterno.Size = New System.Drawing.Size(100, 27)
         Me.txtMaterno.TabIndex = 9
         '
         'txtDireccion
         '
         Me.txtDireccion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDireccion.Enabled = False
-        Me.txtDireccion.Location = New System.Drawing.Point(435, 43)
+        Me.txtDireccion.Location = New System.Drawing.Point(427, 43)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(102, 27)
+        Me.txtDireccion.Size = New System.Drawing.Size(100, 27)
         Me.txtDireccion.TabIndex = 10
         '
-        'lblNombre
+        'Label2
         '
-        Me.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Location = New System.Drawing.Point(130, 10)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(64, 20)
-        Me.lblNombre.TabIndex = 3
-        Me.lblNombre.Text = "Nombre"
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(127, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 20)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Nombre"
         '
         'dtpFechaNacimiento
         '
         Me.dtpFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtpFechaNacimiento.Enabled = False
         Me.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaNacimiento.Location = New System.Drawing.Point(543, 43)
+        Me.dtpFechaNacimiento.Location = New System.Drawing.Point(533, 43)
         Me.dtpFechaNacimiento.Name = "dtpFechaNacimiento"
         Me.dtpFechaNacimiento.Size = New System.Drawing.Size(106, 27)
         Me.dtpFechaNacimiento.TabIndex = 11
         Me.dtpFechaNacimiento.Value = New Date(2000, 1, 1, 12, 0, 0, 0)
         '
-        'lblPaterno
+        'Label3
         '
-        Me.lblPaterno.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblPaterno.AutoSize = True
-        Me.lblPaterno.Location = New System.Drawing.Point(240, 10)
-        Me.lblPaterno.Name = "lblPaterno"
-        Me.lblPaterno.Size = New System.Drawing.Size(59, 20)
-        Me.lblPaterno.TabIndex = 4
-        Me.lblPaterno.Text = "Paterno"
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(235, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(59, 20)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Paterno"
         '
-        'Form1
+        'frmNuevoPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(702, 480)
+        Me.ClientSize = New System.Drawing.Size(689, 480)
+        Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.dgvDatos)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.tableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(650, 300)
-        Me.Name = "Form1"
+        Me.Name = "frmNuevoPersonal"
         Me.Text = "Onmaps Nuevo Personal"
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tableLayoutPanel1.ResumeLayout(False)
-        Me.tableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -287,17 +287,17 @@ Partial Class frmNuevoPersonal
     Private WithEvents btnModificar As Button
     Private WithEvents btnGuardar As Button
     Private WithEvents btnNuevo As Button
-    Private WithEvents tableLayoutPanel1 As TableLayoutPanel
-    Private WithEvents txtIdPersonal As TextBox
+    Private WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Private WithEvents txtIdParticipante As TextBox
     Private WithEvents txtNombre As TextBox
     Private WithEvents lblIdPersonal As Label
-    Private WithEvents lblMaterno As Label
+    Private WithEvents Label1 As Label
     Private WithEvents lblDireccion As Label
     Private WithEvents lblFechaNac As Label
     Private WithEvents txtPaterno As TextBox
     Private WithEvents txtMaterno As TextBox
     Private WithEvents txtDireccion As TextBox
-    Private WithEvents lblNombre As Label
+    Private WithEvents Label2 As Label
     Private WithEvents dtpFechaNacimiento As DateTimePicker
-    Private WithEvents lblPaterno As Label
+    Private WithEvents Label3 As Label
 End Class
