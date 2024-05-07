@@ -60,8 +60,4 @@
             txtSede.Focus()
         End If
     End Sub
-
-    Private Sub frmNuevoPersonal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Application.Exit()
-    End Sub
 End Class

@@ -34,14 +34,14 @@ Partial Class frmAgregarSede
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.lblNumeroExt = New System.Windows.Forms.Label()
         Me.Calle = New System.Windows.Forms.Label()
+        Me.txtCalle = New System.Windows.Forms.TextBox()
+        Me.txtNumExt = New System.Windows.Forms.TextBox()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.txtCalle = New System.Windows.Forms.TextBox()
-        Me.txtNumExt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -148,6 +148,8 @@ Partial Class frmAgregarSede
         '
         'txtCorreo
         '
+        Me.txtCorreo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtCorreo.Enabled = False
         Me.txtCorreo.Location = New System.Drawing.Point(375, 43)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(118, 27)
@@ -172,6 +174,24 @@ Partial Class frmAgregarSede
         Me.Calle.Size = New System.Drawing.Size(42, 20)
         Me.Calle.TabIndex = 10
         Me.Calle.Text = "Calle"
+        '
+        'txtCalle
+        '
+        Me.txtCalle.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtCalle.Enabled = False
+        Me.txtCalle.Location = New System.Drawing.Point(499, 43)
+        Me.txtCalle.Name = "txtCalle"
+        Me.txtCalle.Size = New System.Drawing.Size(118, 27)
+        Me.txtCalle.TabIndex = 12
+        '
+        'txtNumExt
+        '
+        Me.txtNumExt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtNumExt.Enabled = False
+        Me.txtNumExt.Location = New System.Drawing.Point(623, 43)
+        Me.txtNumExt.Name = "txtNumExt"
+        Me.txtNumExt.Size = New System.Drawing.Size(121, 27)
+        Me.txtNumExt.TabIndex = 13
         '
         'dgvDatos
         '
@@ -236,20 +256,6 @@ Partial Class frmAgregarSede
         Me.btnNuevo.TabIndex = 36
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'txtCalle
-        '
-        Me.txtCalle.Location = New System.Drawing.Point(499, 43)
-        Me.txtCalle.Name = "txtCalle"
-        Me.txtCalle.Size = New System.Drawing.Size(118, 27)
-        Me.txtCalle.TabIndex = 12
-        '
-        'txtNumExt
-        '
-        Me.txtNumExt.Location = New System.Drawing.Point(623, 43)
-        Me.txtNumExt.Name = "txtNumExt"
-        Me.txtNumExt.Size = New System.Drawing.Size(121, 27)
-        Me.txtNumExt.TabIndex = 13
-        '
         'frmAgregarSede
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -263,7 +269,8 @@ Partial Class frmAgregarSede
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnNuevo)
         Me.Name = "frmAgregarSede"
-        Me.Text = "frmAgregarSede"
+        Me.Text = "Agregar Sede"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()

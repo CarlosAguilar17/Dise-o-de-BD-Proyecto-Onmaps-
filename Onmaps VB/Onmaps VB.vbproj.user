@@ -7,7 +7,7 @@
     <Compile Update="frmAgregarSede.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmExamen.vb">
+    <Compile Update="frmNuevoExamen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmLogin.vb">

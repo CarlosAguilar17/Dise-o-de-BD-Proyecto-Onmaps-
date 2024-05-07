@@ -2,35 +2,89 @@
 
     Private Sub frmOnmapsNuevo_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+        sqlConexion.Close()
     End Sub
-
+    Dim frmNuevoPersonal As New frmNuevoPersonal
     Private Sub NuevoPersonalMenu_Click(sender As Object, e As EventArgs) Handles MenuNuevoPersonal.Click
-        Dim Pantalla As New frmNuevoPersonal
-        Me.Hide()
-        Pantalla.Show()
+        If frmNuevoPersonal Is Nothing Then
+            frmNuevoPersonal = New frmNuevoPersonal
+            frmNuevoPersonal.MdiParent = Me
+            frmNuevoPersonal.Show()
+        Else
+            If frmNuevoPersonal.Visible = True Then
+                frmNuevoPersonal.BringToFront()
+            Else
+                frmNuevoPersonal = New frmNuevoPersonal
+                frmNuevoPersonal.MdiParent = Me
+                frmNuevoPersonal.Show()
+            End If
+        End If
     End Sub
-
+    Dim frmNuevoParticipante As New frmNuevoParticipante
     Private Sub NuevoParticipanteMenu_Click(sender As Object, e As EventArgs) Handles MenuNuevoParticipante.Click
-        Dim Pantalla As New frmNuevoParticipante
-        Me.Hide()
-        Pantalla.Show()
+        If frmNuevoParticipante Is Nothing Then
+            frmNuevoParticipante = New frmNuevoParticipante
+            frmNuevoParticipante.MdiParent = Me
+            frmNuevoParticipante.Show()
+        Else
+            If frmNuevoParticipante.Visible = True Then
+                frmNuevoParticipante.BringToFront()
+            Else
+                frmNuevoParticipante = New frmNuevoParticipante
+                frmNuevoParticipante.MdiParent = Me
+                frmNuevoParticipante.Show()
+            End If
+        End If
     End Sub
-
+    Dim frmNuevoExamen As New frmNuevoExamen
     Private Sub MenuNuevoExamen_Click(sender As Object, e As EventArgs) Handles MenuNuevoExamen.Click
-        Dim Pantalla As New frmNuevoExamen
-        Me.Hide()
-        Pantalla.Show()
+        If frmNuevoExamen Is Nothing Then
+            frmNuevoExamen = New frmNuevoExamen
+            frmNuevoExamen.MdiParent = Me
+            frmNuevoExamen.Show()
+        Else
+            If frmNuevoExamen.Visible = True Then
+                frmNuevoExamen.BringToFront()
+            Else
+                frmNuevoExamen = New frmNuevoExamen
+                frmNuevoExamen.MdiParent = Me
+                frmNuevoExamen.Show()
+            End If
+        End If
     End Sub
 
-    Private Sub MenuAgregarEstado_Click(sender As Object, e As EventArgs) Handles MenuCiudad.Click
-        Dim Pantalla As New frmAgregarCiudad
-        Me.Hide()
-        Pantalla.Show()
+    Dim frmAgregarCiudad As New frmAgregarCiudad
+    Private Sub MenuAgregarCiudad_Click(sender As Object, e As EventArgs) Handles MenuAgregarCiudad.Click
+        If frmAgregarCiudad Is Nothing Then
+            frmAgregarCiudad = New frmAgregarCiudad
+            frmAgregarCiudad.MdiParent = Me
+            frmAgregarCiudad.Show()
+        Else
+            If frmAgregarCiudad.Visible = True Then
+                frmAgregarCiudad.BringToFront()
+            Else
+                frmAgregarCiudad = New frmAgregarCiudad
+                frmAgregarCiudad.MdiParent = Me
+                frmAgregarCiudad.Show()
+            End If
+        End If
     End Sub
-
+    Dim frmAgregarSede As New frmAgregarSede
     Private Sub MenuAgregarSede_Click(sender As Object, e As EventArgs) Handles MenuAgregarSede.Click
-        Dim Pantalla As New frmAgregarSede
-        Me.Hide()
-        Pantalla.Show()
+        If frmAgregarSede Is Nothing Then
+            frmAgregarSede = New frmAgregarSede
+            frmAgregarSede.MdiParent = Me
+            frmAgregarSede.Show()
+        Else
+            If frmAgregarSede.Visible = True Then
+                frmAgregarSede.BringToFront()
+            Else
+                frmAgregarSede = New frmAgregarSede
+                frmAgregarSede.MdiParent = Me
+                frmAgregarSede.Show()
+            End If
+        End If
     End Sub
+
+
 End Class

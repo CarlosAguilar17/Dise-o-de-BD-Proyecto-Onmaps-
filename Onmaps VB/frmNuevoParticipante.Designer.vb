@@ -249,9 +249,11 @@ Partial Class frmNuevoParticipante
         '
         'txtSede
         '
+        Me.txtSede.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtSede.Enabled = False
         Me.txtSede.Location = New System.Drawing.Point(538, 43)
         Me.txtSede.Name = "txtSede"
-        Me.txtSede.Size = New System.Drawing.Size(105, 27)
+        Me.txtSede.Size = New System.Drawing.Size(106, 27)
         Me.txtSede.TabIndex = 11
         '
         'frmNuevoParticipante
@@ -267,7 +269,8 @@ Partial Class frmNuevoParticipante
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnNuevo)
         Me.Name = "frmNuevoParticipante"
-        Me.Text = "frmNuevoParticipante"
+        Me.Text = "Nuevo Participante"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()

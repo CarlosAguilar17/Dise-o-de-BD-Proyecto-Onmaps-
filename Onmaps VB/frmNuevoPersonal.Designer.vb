@@ -30,7 +30,7 @@ Partial Class frmNuevoPersonal
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.txtIdParticipante = New System.Windows.Forms.TextBox()
+        Me.txtIdPersonal = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblIdPersonal = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -121,7 +121,7 @@ Partial Class frmNuevoPersonal
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel2.Controls.Add(Me.txtIdParticipante, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtIdPersonal, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.lblIdPersonal, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 3, 0)
@@ -141,15 +141,15 @@ Partial Class frmNuevoPersonal
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(642, 80)
         Me.TableLayoutPanel2.TabIndex = 15
         '
-        'txtIdParticipante
+        'txtIdPersonal
         '
-        Me.txtIdParticipante.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtIdParticipante.Enabled = False
-        Me.txtIdParticipante.Location = New System.Drawing.Point(3, 43)
-        Me.txtIdParticipante.Name = "txtIdParticipante"
-        Me.txtIdParticipante.ReadOnly = True
-        Me.txtIdParticipante.Size = New System.Drawing.Size(100, 27)
-        Me.txtIdParticipante.TabIndex = 0
+        Me.txtIdPersonal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtIdPersonal.Enabled = False
+        Me.txtIdPersonal.Location = New System.Drawing.Point(3, 43)
+        Me.txtIdPersonal.Name = "txtIdPersonal"
+        Me.txtIdPersonal.ReadOnly = True
+        Me.txtIdPersonal.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdPersonal.TabIndex = 0
         '
         'txtNombre
         '
@@ -272,7 +272,8 @@ Partial Class frmNuevoPersonal
         Me.Controls.Add(Me.btnNuevo)
         Me.MinimumSize = New System.Drawing.Size(650, 300)
         Me.Name = "frmNuevoPersonal"
-        Me.Text = "Onmaps Nuevo Personal"
+        Me.Text = "Nuevo Personal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
@@ -288,7 +289,7 @@ Partial Class frmNuevoPersonal
     Private WithEvents btnGuardar As Button
     Private WithEvents btnNuevo As Button
     Private WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Private WithEvents txtIdParticipante As TextBox
+    Private WithEvents txtIdPersonal As TextBox
     Private WithEvents txtNombre As TextBox
     Private WithEvents lblIdPersonal As Label
     Private WithEvents Label1 As Label

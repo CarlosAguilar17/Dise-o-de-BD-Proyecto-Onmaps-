@@ -28,7 +28,7 @@ Partial Class frmOnmapsMenu
         Me.MenuNuevoPersonal = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuNuevoParticipante = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuNuevoExamen = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuCiudad = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuAgregarCiudad = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuAgregarSede = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -54,7 +54,7 @@ Partial Class frmOnmapsMenu
         '
         'NuevoPersonalToolStripMenuItem
         '
-        Me.NuevoPersonalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNuevoPersonal, Me.MenuNuevoParticipante, Me.MenuNuevoExamen, Me.MenuCiudad, Me.MenuAgregarSede})
+        Me.NuevoPersonalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNuevoPersonal, Me.MenuNuevoParticipante, Me.MenuNuevoExamen, Me.MenuAgregarCiudad, Me.MenuAgregarSede})
         Me.NuevoPersonalToolStripMenuItem.Name = "NuevoPersonalToolStripMenuItem"
         Me.NuevoPersonalToolStripMenuItem.Size = New System.Drawing.Size(177, 24)
         Me.NuevoPersonalToolStripMenuItem.Text = "Opciones de Agregado"
@@ -77,11 +77,11 @@ Partial Class frmOnmapsMenu
         Me.MenuNuevoExamen.Size = New System.Drawing.Size(224, 26)
         Me.MenuNuevoExamen.Text = "Nuevo Examen"
         '
-        'MenuCiudad
+        'MenuAgregarCiudad
         '
-        Me.MenuCiudad.Name = "MenuCiudad"
-        Me.MenuCiudad.Size = New System.Drawing.Size(224, 26)
-        Me.MenuCiudad.Text = "Agregar Ciudad"
+        Me.MenuAgregarCiudad.Name = "MenuAgregarCiudad"
+        Me.MenuAgregarCiudad.Size = New System.Drawing.Size(224, 26)
+        Me.MenuAgregarCiudad.Text = "Agregar Ciudad"
         '
         'MenuAgregarSede
         '
@@ -96,9 +96,11 @@ Partial Class frmOnmapsMenu
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.MenuStrip2)
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmOnmapsMenu"
         Me.Text = "OnmapsMenu"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
@@ -114,4 +116,5 @@ Partial Class frmOnmapsMenu
     Friend WithEvents MenuNuevoExamen As ToolStripMenuItem
     Friend WithEvents MenuCiudad As ToolStripMenuItem
     Friend WithEvents MenuAgregarSede As ToolStripMenuItem
+    Friend WithEvents MenuAgregarCiudad As ToolStripMenuItem
 End Class

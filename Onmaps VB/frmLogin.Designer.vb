@@ -40,6 +40,7 @@ Partial Class frmLogin
         '
         Me.TxtContraseña.Location = New System.Drawing.Point(185, 79)
         Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtContraseña.Size = New System.Drawing.Size(125, 27)
         Me.TxtContraseña.TabIndex = 1
         '
@@ -81,7 +82,8 @@ Partial Class frmLogin
         Me.Controls.Add(Me.TxtContraseña)
         Me.Controls.Add(Me.TxtUsuario)
         Me.Name = "frmLogin"
-        Me.Text = "frmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Acceso"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
