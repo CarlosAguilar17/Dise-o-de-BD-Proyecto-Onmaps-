@@ -4,7 +4,7 @@ Imports System.Net
 
 Public Class frmLogin
 
-    Private Sub ButtbtnAccederon1_Click(sender As Object, e As EventArgs) Handles ButtbtnAccederon1.Click
+    Public Sub ButtbtnAccederon1_Click(sender As Object, e As EventArgs) Handles ButtbtnAcceder.Click
         Dim sqlcmdComando As New SqlClient.SqlCommand
         sqlcmdComando.CommandText = "SP_ValidarUsuario '" & TxtUsuario.Text & "','" & TxtContraseña.Text & "'"
         sqlcmdComando.Connection = sqlConexion
@@ -29,5 +29,18 @@ Public Class frmLogin
     Private Sub frmLogin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         sqlConexion.Close()
         Application.Exit()
+    End Sub
+
+    Private Sub TxtUsuario_KeyDown(sender As Object, e As KeyEventArgs)
+        If e.KeyCode = Keys.Enter Then
+            TxtContraseña.Focus()
+        End If
+    End Sub
+
+    Private Sub TxtContraseña_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtContraseña.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+            Me.ButtbtnAcceder.PerformClick()
+        End If
     End Sub
 End Class

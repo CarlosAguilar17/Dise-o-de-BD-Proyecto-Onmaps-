@@ -26,7 +26,7 @@ Partial Class frmLogin
         Me.TxtContraseña = New System.Windows.Forms.TextBox()
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.lblContraseña = New System.Windows.Forms.Label()
-        Me.ButtbtnAccederon1 = New System.Windows.Forms.Button()
+        Me.ButtbtnAcceder = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TxtUsuario
@@ -62,21 +62,21 @@ Partial Class frmLogin
         Me.lblContraseña.TabIndex = 3
         Me.lblContraseña.Text = "Contraseña"
         '
-        'ButtbtnAccederon1
+        'ButtbtnAcceder
         '
-        Me.ButtbtnAccederon1.Location = New System.Drawing.Point(117, 137)
-        Me.ButtbtnAccederon1.Name = "ButtbtnAccederon1"
-        Me.ButtbtnAccederon1.Size = New System.Drawing.Size(94, 29)
-        Me.ButtbtnAccederon1.TabIndex = 4
-        Me.ButtbtnAccederon1.Text = "Acceder"
-        Me.ButtbtnAccederon1.UseVisualStyleBackColor = True
+        Me.ButtbtnAcceder.Location = New System.Drawing.Point(117, 137)
+        Me.ButtbtnAcceder.Name = "ButtbtnAcceder"
+        Me.ButtbtnAcceder.Size = New System.Drawing.Size(94, 29)
+        Me.ButtbtnAcceder.TabIndex = 4
+        Me.ButtbtnAcceder.Text = "Acceder"
+        Me.ButtbtnAcceder.UseVisualStyleBackColor = True
         '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(333, 189)
-        Me.Controls.Add(Me.ButtbtnAccederon1)
+        Me.Controls.Add(Me.ButtbtnAcceder)
         Me.Controls.Add(Me.lblContraseña)
         Me.Controls.Add(Me.lblUsuario)
         Me.Controls.Add(Me.TxtContraseña)
@@ -93,5 +93,5 @@ Partial Class frmLogin
     Friend WithEvents TxtContraseña As TextBox
     Friend WithEvents lblUsuario As Label
     Friend WithEvents lblContraseña As Label
-    Friend WithEvents ButtbtnAccederon1 As Button
+    Friend WithEvents ButtbtnAcceder As Button
 End Class

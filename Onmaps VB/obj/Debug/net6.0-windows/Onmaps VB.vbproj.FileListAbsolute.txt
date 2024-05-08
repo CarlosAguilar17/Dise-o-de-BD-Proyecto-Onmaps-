@@ -33,6 +33,6 @@ C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmOnma
 C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmNuevoParticipante.resources
 C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.Resources.resources
 C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmSplash.resources
-C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmAgregarCiudad.resources
 C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmAgregarSede.resources
 C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmNuevoExamen.resources
+C:\Users\carlo\source\repos\Onmaps VB\obj\Debug\net6.0-windows\Onmaps_VB.frmAgregarEstado.resources

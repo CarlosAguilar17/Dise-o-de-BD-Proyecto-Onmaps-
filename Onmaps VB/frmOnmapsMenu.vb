@@ -53,17 +53,17 @@
         End If
     End Sub
 
-    Dim frmAgregarCiudad As New frmAgregarCiudad
-    Private Sub MenuAgregarCiudad_Click(sender As Object, e As EventArgs) Handles MenuAgregarCiudad.Click
+    Dim frmAgregarCiudad As New frmAgregarEstado
+    Private Sub MenuAgregarCiudad_Click(sender As Object, e As EventArgs) Handles MenuAgregarEstado.Click
         If frmAgregarCiudad Is Nothing Then
-            frmAgregarCiudad = New frmAgregarCiudad
+            frmAgregarCiudad = New frmAgregarEstado
             frmAgregarCiudad.MdiParent = Me
             frmAgregarCiudad.Show()
         Else
             If frmAgregarCiudad.Visible = True Then
                 frmAgregarCiudad.BringToFront()
             Else
-                frmAgregarCiudad = New frmAgregarCiudad
+                frmAgregarCiudad = New frmAgregarEstado
                 frmAgregarCiudad.MdiParent = Me
                 frmAgregarCiudad.Show()
             End If
