@@ -11,13 +11,15 @@
         txtNombre.Enabled = False
         txtPaterno.Enabled = False
         txtMaterno.Enabled = False
-        txtSede.Enabled = False
+        cboSede.Enabled = False
         txtIdParticipante.Clear()
         txtGrado.Clear()
         txtNombre.Clear()
         txtPaterno.Clear()
         txtMaterno.Clear()
-        txtSede.Clear()
+        'txtSede.Clear()
+        llenaCombo("Select idSede, Nombre from Sede", cboSede, "Nombre", "Sede", sqlConexion)
+
     End Sub
 
     Private Sub frmNuevoParticipante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -34,12 +36,12 @@
         txtNombre.Enabled = True
         txtPaterno.Enabled = True
         txtMaterno.Enabled = True
-        txtSede.Enabled = True
+        cboSede.Enabled = True
         txtGrado.Focus()
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim sqlcmdComando As New SqlClient.SqlCommand
-        sqlcmdComando.CommandText = "SP_Participante 1, 0, '" & txtGrado.Text & "','" & txtNombre.Text & "','" & txtPaterno.Text & "','" & txtMaterno.Text & "'," & txtSede.Text
+        sqlcmdComando.CommandText = "SP_Participante 1, 0, '" & txtGrado.Text & "','" & txtNombre.Text & "','" & txtPaterno.Text & "','" & txtMaterno.Text & "'," & cboSede.Text
         sqlcmdComando.Connection = sqlConexion
         sqlcmdComando.ExecuteNonQuery()
         MessageBox.Show("Participante dado de alta exitosamente", "Atencion")
@@ -48,7 +50,7 @@
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If MessageBox.Show("Seguro que deseas modificar el registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Dim sqlcmdComando As New SqlClient.SqlCommand
-            sqlcmdComando.CommandText = "SP_Participante 1, '" & txtIdParticipante.Text & "', '" & txtGrado.Text & "','" & txtNombre.Text & "','" & txtPaterno.Text & "','" & txtMaterno.Text & "'," & txtSede.Text
+            sqlcmdComando.CommandText = "SP_Participante 1, '" & txtIdParticipante.Text & "', '" & txtGrado.Text & "','" & txtNombre.Text & "','" & txtPaterno.Text & "','" & txtMaterno.Text & "'," & cboSede.Text
             sqlcmdComando.Connection = sqlConexion
             sqlcmdComando.ExecuteNonQuery()
             MessageBox.Show("Datos del participante modificados exitosamente", "Atencion")
@@ -79,7 +81,7 @@
 
     Private Sub txtMaterno_KeyDown(sender As Object, e As KeyEventArgs)
         If e.KeyCode = Keys.Enter Then
-            txtSede.Focus()
+            cboSede.Focus()
         End If
     End Sub
 
@@ -89,7 +91,7 @@
         txtNombre.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
         txtPaterno.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
         txtMaterno.Text = dgvDatos.CurrentRow.Cells(4).Value.ToString
-        txtSede.Text = dgvDatos.CurrentRow.Cells(5).Value.ToString
+        cboSede.Text = dgvDatos.CurrentRow.Cells(5).Value.ToString
         btnNuevo.Enabled = False 'inicializa solo los botones
         btnGuardar.Enabled = True
         btnModificar.Enabled = True
@@ -99,7 +101,7 @@
         txtNombre.Enabled = True
         txtPaterno.Enabled = True
         txtMaterno.Enabled = True
-        txtSede.Enabled = True
+        cboSede.Enabled = True
         txtNombre.SelectAll()   'ubica el cursor en el nombre para su cambio rapido
         txtNombre.Focus()
     End Sub
@@ -115,4 +117,5 @@
 
         End If
     End Sub
+
 End Class

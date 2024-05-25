@@ -9,11 +9,12 @@
         txtEstado.Enabled = False
         txtIdEstado.Enabled = False
         txtCorreo.Enabled = False
-        txtDelegado.Enabled = False
+        cboDelegado.Enabled = False
         txtEstado.Clear()
         txtCorreo.Clear()
         txtIdEstado.Clear()
-        txtDelegado.Clear()
+        dgvDatos.Columns(2).Visible = False
+        llenaCombo("Select idpersonal, concat(Nombre,' ',Paterno,' ',Materno)as Nombre from Personal", cboDelegado, "Nombre", "Personal", sqlConexion)
     End Sub
 
     Private Sub frmAgregarEstado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,13 +29,13 @@
         txtIdEstado.Enabled = True
         txtEstado.Enabled = True
         txtCorreo.Enabled = True
-        txtDelegado.Enabled = True
+        cboDelegado.Enabled = True
         txtEstado.Focus()
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim sqlcmdComando As New SqlClient.SqlCommand
-        sqlcmdComando.CommandText = "SP_Estado 1, 0, " & txtDelegado.Text & ",'" & txtCorreo.Text & "','" & txtEstado.Text & "'"
+        sqlcmdComando.CommandText = "SP_Estado 1, 0, " & cboDelegado.text & ",'" & txtCorreo.Text & "','" & txtEstado.Text & "'"
         sqlcmdComando.Connection = sqlConexion
         sqlcmdComando.ExecuteNonQuery()
         MessageBox.Show("Extado dado de alta exitosamente", "Atencion")
@@ -44,7 +45,7 @@
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If MessageBox.Show("Seguro que deseas modificar el registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Dim sqlcmdComando As New SqlClient.SqlCommand
-            sqlcmdComando.CommandText = "SP_Estado 1, " & txtIdEstado.Text & ", " & txtDelegado.Text & ",'" & txtCorreo.Text & "','" & txtEstado.Text & "'"
+            sqlcmdComando.CommandText = "SP_Estado 1, " & txtIdEstado.Text & ", " & cboDelegado.Text & ",'" & txtCorreo.Text & "','" & txtEstado.Text & "'"
             sqlcmdComando.Connection = sqlConexion
             sqlcmdComando.ExecuteNonQuery()
             MessageBox.Show("Datos del Examen modificados exitosamente", "Atencion")
@@ -58,7 +59,7 @@
 
     Private Sub txtNombre_KeyDown(sender As Object, e As KeyEventArgs)
         If e.KeyCode = Keys.Enter Then
-            txtDelegado.Focus()
+            cboDelegado.Focus()
         End If
     End Sub
     Private Sub txtDelegado_KeyDown(sender As Object, e As KeyEventArgs)
@@ -68,7 +69,7 @@
     End Sub
     Private Sub dgvDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellDoubleClick
         txtIdEstado.Text = dgvDatos.CurrentRow.Cells(0).Value.ToString    'Copia todos los datos de la Fila seleccionada a los txt
-        txtDelegado.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
+        cboDelegado.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
         txtCorreo.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
         txtEstado.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
         btnNuevo.Enabled = False 'inicializa solo los botones
@@ -77,7 +78,7 @@
         btnEliminar.Enabled = True
         btnCancelar.Enabled = True
         txtIdEstado.Enabled = False
-        txtDelegado.Enabled = True
+        cboDelegado.Enabled = True
         txtCorreo.Enabled = True
         txtEstado.Enabled = True
         txtEstado.SelectAll()   'ubica el cursor en el nombre para su cambio rapido
@@ -93,5 +94,9 @@
             inicializarPantalla()
 
         End If
+    End Sub
+
+    Private Sub cboDelegado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDelegado.SelectedIndexChanged
+
     End Sub
 End Class

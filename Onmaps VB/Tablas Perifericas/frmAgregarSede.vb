@@ -7,17 +7,19 @@
         btnEliminar.Enabled = False
         btnCancelar.Enabled = False
         txtIdSede.Enabled = False
-        txtCiudad.Enabled = False
+        cboCiudad.Enabled = False
         txtNombre.Enabled = False
         txtColonia.Enabled = False
         txtCalle.Enabled = False
         txtNumExt.Enabled = False
         txtIdSede.Clear()
-        txtCiudad.Clear()
+        'txtCiudad.Clear()
         txtNombre.Clear()
         txtColonia.Clear()
         txtCalle.Clear()
         txtNumExt.Clear()
+        llenaCombo("Select idCiudad, Nombre from Ciudad", cboCiudad, "Nombre", "Ciudad", sqlConexion)
+
     End Sub
 
     Private Sub frmAgregarSede_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -31,17 +33,17 @@
         btnEliminar.Enabled = True
         btnCancelar.Enabled = True
         txtIdSede.Enabled = True
-        txtCiudad.Enabled = True
+        cboCiudad.Enabled = True
         txtNombre.Enabled = True
         txtCalle.Enabled = True
         txtColonia.Enabled = True
         txtNumExt.Enabled = True
-        txtCiudad.Focus()
+        cboCiudad.Focus()
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim sqlcmdComando As New SqlClient.SqlCommand
-        sqlcmdComando.CommandText = "SP_Sede 1," & txtCiudad.Text & ",'" & txtNombre.Text & "','" & txtCalle.Text & "','" & txtColonia.Text & "','" & txtNumExt.Text & "'"
+        sqlcmdComando.CommandText = "SP_Sede 1," & cboCiudad.Text & ",'" & txtNombre.Text & "','" & txtCalle.Text & "','" & txtColonia.Text & "','" & txtNumExt.Text & "'"
         sqlcmdComando.Connection = sqlConexion
         sqlcmdComando.ExecuteNonQuery()
         MessageBox.Show("Sede dada de alta exitosamente", "Atencion")
@@ -51,7 +53,7 @@
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If MessageBox.Show("Seguro que deseas modificar el registro?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Dim sqlcmdComando As New SqlClient.SqlCommand
-            sqlcmdComando.CommandText = "SP_Sede 3,'" & txtCiudad.Text & ",'" & txtNombre.Text & "','" & txtCalle.Text & "','" & txtColonia.Text & "','" & txtNumExt.Text & "'"
+            sqlcmdComando.CommandText = "SP_Sede 3,'" & cboCiudad.Text & ",'" & txtNombre.Text & "','" & txtCalle.Text & "','" & txtColonia.Text & "','" & txtNumExt.Text & "'"
             sqlcmdComando.Connection = sqlConexion
             sqlcmdComando.ExecuteNonQuery()
             'sqlcmdComando.ExecuteReader() 'Cuando regresa una matriz
@@ -89,7 +91,7 @@
 
     Private Sub dgvDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellDoubleClick
         txtIdSede.Text = dgvDatos.CurrentRow.Cells(0).Value.ToString    'Copia todos los datos de la Fila seleccionada a los txt
-        txtCiudad.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
+        cboCiudad.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
         txtNombre.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
         txtCalle.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
         txtColonia.Text = dgvDatos.CurrentRow.Cells(4).Value.ToString
@@ -100,12 +102,12 @@
         btnEliminar.Enabled = True
         btnCancelar.Enabled = True
         txtIdSede.Enabled = False
-        txtCiudad.Enabled = True
+        cboCiudad.Enabled = True
         txtNombre.Enabled = True
         txtCalle.Enabled = True
         txtColonia.Enabled = True
         txtNumExt.Enabled = True
-        txtCiudad.SelectAll()   'ubica el cursor en el nombre para su cambio rapido
+        cboCiudad.SelectAll()   'ubica el cursor en el nombre para su cambio rapido
         txtNombre.Focus()
 
     End Sub

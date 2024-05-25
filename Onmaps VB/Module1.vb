@@ -12,4 +12,15 @@
         dgvDatos.DataSource = sqldsConjunto.Tables("Tabla")
 
     End Sub
+
+
+    Sub llenaCombo(strConsulta As String, combo As ComboBox, Id As String, descripcion As String, sqlCon As SqlClient.SqlConnection)
+        Dim da As New SqlClient.SqlDataAdapter(strConsulta, sqlCon)
+        Dim ds As New DataSet
+        da.Fill(ds)
+        combo.DataSource = ds.Tables(0)
+        combo.DisplayMember = descripcion
+        combo.ValueMember = Id
+    End Sub
+
 End Module

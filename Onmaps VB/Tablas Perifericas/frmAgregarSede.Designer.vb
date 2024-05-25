@@ -25,7 +25,6 @@ Partial Class frmAgregarSede
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAgregarSede))
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtIdSede = New System.Windows.Forms.TextBox()
-        Me.txtCiudad = New System.Windows.Forms.TextBox()
         Me.lblIdSede = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblCiudad = New System.Windows.Forms.Label()
@@ -36,6 +35,7 @@ Partial Class frmAgregarSede
         Me.Calle = New System.Windows.Forms.Label()
         Me.txtCalle = New System.Windows.Forms.TextBox()
         Me.txtNumExt = New System.Windows.Forms.TextBox()
+        Me.cboCiudad = New System.Windows.Forms.ComboBox()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -59,7 +59,6 @@ Partial Class frmAgregarSede
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel2.Controls.Add(Me.txtIdSede, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtCiudad, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.lblIdSede, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 2, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.lblCiudad, 1, 0)
@@ -70,6 +69,7 @@ Partial Class frmAgregarSede
         Me.TableLayoutPanel2.Controls.Add(Me.Calle, 4, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtCalle, 4, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtNumExt, 5, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.cboCiudad, 1, 1)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(12, 58)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
@@ -87,15 +87,6 @@ Partial Class frmAgregarSede
         Me.txtIdSede.ReadOnly = True
         Me.txtIdSede.Size = New System.Drawing.Size(118, 27)
         Me.txtIdSede.TabIndex = 0
-        '
-        'txtCiudad
-        '
-        Me.txtCiudad.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtCiudad.Enabled = False
-        Me.txtCiudad.Location = New System.Drawing.Point(127, 43)
-        Me.txtCiudad.Name = "txtCiudad"
-        Me.txtCiudad.Size = New System.Drawing.Size(118, 27)
-        Me.txtCiudad.TabIndex = 1
         '
         'lblIdSede
         '
@@ -193,6 +184,15 @@ Partial Class frmAgregarSede
         Me.txtNumExt.Size = New System.Drawing.Size(121, 27)
         Me.txtNumExt.TabIndex = 13
         '
+        'cboCiudad
+        '
+        Me.cboCiudad.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cboCiudad.FormattingEnabled = True
+        Me.cboCiudad.Location = New System.Drawing.Point(127, 43)
+        Me.cboCiudad.Name = "cboCiudad"
+        Me.cboCiudad.Size = New System.Drawing.Size(118, 28)
+        Me.cboCiudad.TabIndex = 14
+        '
         'dgvDatos
         '
         Me.dgvDatos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -281,7 +281,6 @@ Partial Class frmAgregarSede
 
     Private WithEvents TableLayoutPanel2 As TableLayoutPanel
     Private WithEvents txtIdSede As TextBox
-    Private WithEvents txtCiudad As TextBox
     Private WithEvents lblIdSede As Label
     Private WithEvents txtNombre As TextBox
     Private WithEvents lblCiudad As Label
@@ -298,4 +297,5 @@ Partial Class frmAgregarSede
     Private WithEvents btnNuevo As Button
     Friend WithEvents txtCalle As TextBox
     Friend WithEvents txtNumExt As TextBox
+    Friend WithEvents cboCiudad As ComboBox
 End Class

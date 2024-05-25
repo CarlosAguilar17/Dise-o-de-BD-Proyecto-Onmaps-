@@ -41,7 +41,7 @@ Partial Class frmNuevoParticipante
         Me.txtMaterno = New System.Windows.Forms.TextBox()
         Me.lblGrado = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtSede = New System.Windows.Forms.TextBox()
+        Me.cboSede = New System.Windows.Forms.ComboBox()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -132,7 +132,7 @@ Partial Class frmNuevoParticipante
         Me.TableLayoutPanel2.Controls.Add(Me.txtMaterno, 4, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.lblGrado, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtSede, 5, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.cboSede, 5, 1)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(12, 58)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
@@ -247,14 +247,14 @@ Partial Class frmNuevoParticipante
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombre"
         '
-        'txtSede
+        'cboSede
         '
-        Me.txtSede.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtSede.Enabled = False
-        Me.txtSede.Location = New System.Drawing.Point(538, 43)
-        Me.txtSede.Name = "txtSede"
-        Me.txtSede.Size = New System.Drawing.Size(106, 27)
-        Me.txtSede.TabIndex = 11
+        Me.cboSede.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cboSede.FormattingEnabled = True
+        Me.cboSede.Location = New System.Drawing.Point(538, 43)
+        Me.cboSede.Name = "cboSede"
+        Me.cboSede.Size = New System.Drawing.Size(106, 28)
+        Me.cboSede.TabIndex = 11
         '
         'frmNuevoParticipante
         '
@@ -297,5 +297,5 @@ Partial Class frmNuevoParticipante
     Private WithEvents txtMaterno As TextBox
     Private WithEvents lblGrado As Label
     Private WithEvents Label3 As Label
-    Friend WithEvents txtSede As TextBox
+    Friend WithEvents cboSede As ComboBox
 End Class

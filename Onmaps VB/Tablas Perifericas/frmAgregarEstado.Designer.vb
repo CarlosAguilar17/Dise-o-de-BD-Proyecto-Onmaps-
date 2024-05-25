@@ -27,11 +27,11 @@ Partial Class frmAgregarEstado
         Me.txtIdEstado = New System.Windows.Forms.TextBox()
         Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.lblidEstado = New System.Windows.Forms.Label()
-        Me.txtDelegado = New System.Windows.Forms.TextBox()
         Me.lblCiudad = New System.Windows.Forms.Label()
-        Me.idDelegado = New System.Windows.Forms.Label()
+        Me.lblDelegado = New System.Windows.Forms.Label()
         Me.lblCorreo = New System.Windows.Forms.Label()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.cboDelegado = New System.Windows.Forms.ComboBox()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -55,24 +55,24 @@ Partial Class frmAgregarEstado
         Me.TableLayoutPanel2.Controls.Add(Me.txtIdEstado, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtEstado, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.lblidEstado, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtDelegado, 2, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.lblCiudad, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.idDelegado, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblDelegado, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.lblCorreo, 3, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtCorreo, 3, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.cboDelegado, 2, 1)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(12, 58)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(525, 80)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(525, 82)
         Me.TableLayoutPanel2.TabIndex = 35
         '
         'txtIdEstado
         '
         Me.txtIdEstado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtIdEstado.Enabled = False
-        Me.txtIdEstado.Location = New System.Drawing.Point(3, 43)
+        Me.txtIdEstado.Location = New System.Drawing.Point(3, 44)
         Me.txtIdEstado.Name = "txtIdEstado"
         Me.txtIdEstado.ReadOnly = True
         Me.txtIdEstado.Size = New System.Drawing.Size(125, 27)
@@ -82,7 +82,7 @@ Partial Class frmAgregarEstado
         '
         Me.txtEstado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtEstado.Enabled = False
-        Me.txtEstado.Location = New System.Drawing.Point(134, 43)
+        Me.txtEstado.Location = New System.Drawing.Point(134, 44)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(125, 27)
         Me.txtEstado.TabIndex = 1
@@ -97,15 +97,6 @@ Partial Class frmAgregarEstado
         Me.lblidEstado.TabIndex = 2
         Me.lblidEstado.Text = "idEstado"
         '
-        'txtDelegado
-        '
-        Me.txtDelegado.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtDelegado.Enabled = False
-        Me.txtDelegado.Location = New System.Drawing.Point(265, 43)
-        Me.txtDelegado.Name = "txtDelegado"
-        Me.txtDelegado.Size = New System.Drawing.Size(125, 27)
-        Me.txtDelegado.TabIndex = 8
-        '
         'lblCiudad
         '
         Me.lblCiudad.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -116,15 +107,15 @@ Partial Class frmAgregarEstado
         Me.lblCiudad.TabIndex = 3
         Me.lblCiudad.Text = "Nombre Estado"
         '
-        'idDelegado
+        'lblDelegado
         '
-        Me.idDelegado.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.idDelegado.AutoSize = True
-        Me.idDelegado.Location = New System.Drawing.Point(281, 10)
-        Me.idDelegado.Name = "idDelegado"
-        Me.idDelegado.Size = New System.Drawing.Size(92, 20)
-        Me.idDelegado.TabIndex = 4
-        Me.idDelegado.Text = "Id Delegado"
+        Me.lblDelegado.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblDelegado.AutoSize = True
+        Me.lblDelegado.Location = New System.Drawing.Point(290, 10)
+        Me.lblDelegado.Name = "lblDelegado"
+        Me.lblDelegado.Size = New System.Drawing.Size(75, 20)
+        Me.lblDelegado.TabIndex = 4
+        Me.lblDelegado.Text = "Delegado"
         '
         'lblCorreo
         '
@@ -140,10 +131,19 @@ Partial Class frmAgregarEstado
         '
         Me.txtCorreo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtCorreo.Enabled = False
-        Me.txtCorreo.Location = New System.Drawing.Point(396, 43)
+        Me.txtCorreo.Location = New System.Drawing.Point(396, 44)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(126, 27)
         Me.txtCorreo.TabIndex = 9
+        '
+        'cboDelegado
+        '
+        Me.cboDelegado.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboDelegado.FormattingEnabled = True
+        Me.cboDelegado.Location = New System.Drawing.Point(265, 47)
+        Me.cboDelegado.Name = "cboDelegado"
+        Me.cboDelegado.Size = New System.Drawing.Size(125, 28)
+        Me.cboDelegado.TabIndex = 10
         '
         'dgvDatos
         '
@@ -235,9 +235,8 @@ Partial Class frmAgregarEstado
     Private WithEvents txtIdEstado As TextBox
     Private WithEvents txtEstado As TextBox
     Private WithEvents lblidEstado As Label
-    Private WithEvents txtDelegado As TextBox
     Private WithEvents lblCiudad As Label
-    Private WithEvents idDelegado As Label
+    Private WithEvents lblDelegado As Label
     Private WithEvents lblCorreo As Label
     Friend WithEvents txtCorreo As TextBox
     Private WithEvents dgvDatos As DataGridView
@@ -246,4 +245,5 @@ Partial Class frmAgregarEstado
     Private WithEvents btnModificar As Button
     Private WithEvents btnGuardar As Button
     Private WithEvents btnNuevo As Button
+    Friend WithEvents cboDelegado As ComboBox
 End Class
